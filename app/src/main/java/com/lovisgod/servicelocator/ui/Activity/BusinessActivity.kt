@@ -65,7 +65,7 @@ class BusinessActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
             if (destination.id != R.id.landingFragment ){
                 appBarLayout.visibility = View.VISIBLE
                 menuIcon.visibility = View.GONE
-                toolbar.title = "SafeHaven"
+                toolbar.title = ""
             }
 
             if (destination.id  == R.id.landingFragment){
