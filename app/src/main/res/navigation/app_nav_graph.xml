@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph.xml"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.lovisgod.servicelocator.ui.Fragments.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment_to_serviceListFragment"
+            app:destination="@id/serviceListFragment"
+            app:popUpTo="@id/landingFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_serviceDetailsFragment"
+            app:destination="@id/serviceDetailsFragment"
+            app:popUpTo="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceListFragment"
+        android:name="com.lovisgod.servicelocator.ui.Fragments.ServiceListFragment"
+        android:label="ServiceListFragment" >
+        <action
+            android:id="@+id/action_serviceListFragment_to_serviceDetailsFragment"
+            app:destination="@id/serviceDetailsFragment"
+            app:popUpTo="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceDetailsFragment"
+        android:name="com.lovisgod.servicelocator.ui.Fragments.ServiceDetailsFragment"
+        android:label="ServiceDetailsFragment" >
+        <action
+            android:id="@+id/action_serviceDetailsFragment_to_orderConfirmFragment"
+            app:destination="@id/orderConfirmFragment"
+            app:popUpTo="@id/serviceDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderConfirmFragment"
+        android:name="com.lovisgod.servicelocator.ui.Fragments.OrderConfirmFragment"
+        android:label="OrderConfirmFragment" />
+</navigation>
